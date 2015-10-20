@@ -20,19 +20,6 @@ Gui::Gui(QWidget *parent) :
     m_ui->tableWidget->horizontalHeader()->setStretchLastSection(true);
 
     QObject::connect(m_ui->listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(show_packet_info(int)));
-    /*for (auto i = 0; i < 20; ++i)
-        ui->listWidget->addItem(QString::number(i));
-    ui->tableWidget->setRowCount(2);
-    ui->tableWidget->setColumnCount(2);
-    QTableWidgetItem *item00 = new QTableWidgetItem(tr("Source"));
-    ui->tableWidget->setItem(0, 0, item00);
-    QTableWidgetItem *item01 = new QTableWidgetItem(tr("1234245435"));
-    ui->tableWidget->setItem(0, 1, item01);
-    QTableWidgetItem *item10 = new QTableWidgetItem(tr("Dst"));
-    ui->tableWidget->setItem(1, 0, item10);
-    QTableWidgetItem *item11 = new QTableWidgetItem(tr("534643653456"));
-    ui->tableWidget->setItem(1, 1, item11);
-    ui->tableWidget->horizontalHeader()->setStretchLastSection(true);*/
 }
 
 Gui::~Gui()
