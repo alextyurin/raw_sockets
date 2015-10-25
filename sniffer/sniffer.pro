@@ -14,11 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         gui.cpp \
-    listener.cpp
+    listener.cpp \
+    field.cpp
 
 HEADERS  += \
     gui.hpp \
-    listener.hpp
+    listener.hpp \
+    field.hpp
 
 FORMS    += gui.ui
 

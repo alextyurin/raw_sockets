@@ -9,6 +9,7 @@ class Listener : public QThread
 public:
     explicit Listener(const std::string &device, Gui *gui, QObject *parent = 0);
     void run();
+    void stop();
 private:
     Tins::Sniffer m_sniffer;
     Gui *m_gui;

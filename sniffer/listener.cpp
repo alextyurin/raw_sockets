@@ -14,16 +14,11 @@ void Listener::run()
     m_working = true;
     while(m_working)
     {
-        std::unique_ptr<Tins::PDU> pdu(m_sniffer.next_packet());
-        try
-        {
-            m_gui->on_packet_recieved(pdu->rfind_pdu<Tins::IP>());
-        }
-        catch(Tins::pdu_not_found)
-        {
-            /*
-             *  Listening some other packets -> skip it
-             */
-        }
+        m_gui->on_packet_recieved(m_sniffer.next_packet());
     }
+}
+
+void Listener::stop()
+{
+    m_working = false;
 }
