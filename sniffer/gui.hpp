@@ -17,7 +17,7 @@ class Gui : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Gui(QWidget *parent = 0);
+    explicit Gui(const std::string &device, QWidget *parent = 0);
     ~Gui();
     void on_packet_recieved(Tins::PDU *pdu);
 private slots:

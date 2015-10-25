@@ -26,6 +26,6 @@ FORMS    += gui.ui
 
 CONFIG += c++11
 
-LIBS += ../externals/libtins-master/build/lib/libtins.so
+LIBS += ../../externals/libtins-master/build/lib/libtins.so
 
-INCLUDEPATH += ../externals/libtins-master/include
+INCLUDEPATH += ../../externals/libtins-master/include

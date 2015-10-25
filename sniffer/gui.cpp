@@ -80,7 +80,7 @@ uint32_t ip_to_int(const QString &ip)
 
 } // anonymous namespace
 
-Gui::Gui(QWidget *parent) :
+Gui::Gui(const std::string &device, QWidget *parent) :
     QMainWindow(parent),
     m_ui(new Ui::Gui),
     m_ascii(true),
@@ -102,7 +102,7 @@ Gui::Gui(QWidget *parent) :
     QObject::connect(m_ui->radioButton, SIGNAL(clicked()), this, SLOT(ascii_radiobutton_clicked()));
     QObject::connect(m_ui->radioButton_2, SIGNAL(clicked()), this, SLOT(hex_radiobutton_clicked()));
     QObject::connect(m_ui->comboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(combobox_changed(int)));
-    m_listener = new Listener("eth0", this);
+    m_listener = new Listener(device, this);
 }
 
 Gui::~Gui()
