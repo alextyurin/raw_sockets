@@ -154,7 +154,7 @@ bool Gui::check_by_filters(Tins::PDU *pdu)
         if ((1 == protocol) && (1 == ip_packet.protocol()))
         {
             valid_protocol = true;
-            std::cout << "OMG" << std::endl;
+            std::cout << "OMG123" << std::endl;
         }
         if ((2 == protocol) && (6 == ip_packet.protocol()))
         {
@@ -234,7 +234,7 @@ bool Gui::check_by_filters(Tins::PDU *pdu)
 
 void Gui::show_packet_info(const int index)
 {
-    if (index > 0)
+    if (index >= 0 && index < packet_limit)
     {
         m_mutex.lock();
         clear_table();
@@ -264,7 +264,7 @@ void Gui::show_packet_info(const int index)
             }
             else if (1 == protocol)
             {
-                std::cout << "OMG" << std::endl;
+                show_ip_packet_info(ip_packet);
             }
         }
         catch (Tins::pdu_not_found)

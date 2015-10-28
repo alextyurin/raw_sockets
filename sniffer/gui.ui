@@ -19,11 +19,23 @@
      <rect>
       <x>30</x>
       <y>20</y>
-      <width>348</width>
+      <width>389</width>
       <height>394</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="centralLayout">
+     <property name="leftMargin">
+      <number>25</number>
+     </property>
+     <property name="topMargin">
+      <number>25</number>
+     </property>
+     <property name="rightMargin">
+      <number>25</number>
+     </property>
+     <property name="bottomMargin">
+      <number>25</number>
+     </property>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
@@ -57,8 +69,8 @@
            <rect>
             <x>0</x>
             <y>20</y>
-            <width>249</width>
-            <height>223</height>
+            <width>331</width>
+            <height>221</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout">
@@ -261,10 +273,21 @@
              </item>
             </layout>
            </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
           </layout>
          </widget>
-         <zorder>verticalLayoutWidget</zorder>
-         <zorder></zorder>
         </widget>
        </item>
       </layout>
@@ -295,22 +318,6 @@
      </item>
     </layout>
    </widget>
-   <zorder>layoutWidget</zorder>
-   <zorder>comboBox</zorder>
-   <zorder>label</zorder>
-   <zorder>src_ip_label</zorder>
-   <zorder>src_ip_edit</zorder>
-   <zorder>src_ip_edit</zorder>
-   <zorder>dst_ip_label</zorder>
-   <zorder>dst_ip_edit</zorder>
-   <zorder>radioButton</zorder>
-   <zorder>radioButton_2</zorder>
-   <zorder>radioButton</zorder>
-   <zorder>radioButton_2</zorder>
-   <zorder>src_port_label</zorder>
-   <zorder>src_port_edit</zorder>
-   <zorder>dst_port_label</zorder>
-   <zorder>dst_port_edit</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
